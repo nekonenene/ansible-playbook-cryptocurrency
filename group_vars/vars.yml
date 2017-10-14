@@ -1,3 +1,4 @@
-ansible_become_pass: "{{ your_server_password }}" # Set your server password!
+# Set yout server password if you need
+#ansible_become_pass: password
 
 systemd_service_dir: /etc/systemd/system
