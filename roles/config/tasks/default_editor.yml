@@ -1,0 +1,6 @@
+# nano がデフォルトなので vim に変更
+- name: change default editor to vim
+  become: true
+  become_user: root
+  shell: "update-alternatives --install /usr/bin/editor editor `which vim` 100"
+  when: (is_init_mode is defined) and is_init_mode
