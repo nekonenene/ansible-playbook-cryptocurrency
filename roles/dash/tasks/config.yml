@@ -1,0 +1,16 @@
+- name: create data dir
+  become: true
+  become_user: root
+  file:
+    path: "{{ dash_data_dir }}"
+    mode: 0700
+    state: directory
+    recurse: yes
+
+- name: put dash config file
+  become: true
+  become_user: root
+  template:
+    src: "dash.conf.j2"
+    dest: "{{ dash_conf_dir }}/dash.conf"
+  notify: restart dash

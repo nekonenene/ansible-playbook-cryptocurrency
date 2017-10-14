@@ -1,0 +1,8 @@
+- name: check exist dashd command
+  shell: type dashd
+  register: exist_dashd
+  failed_when: false
+  changed_when: false
+
+- set_fact:
+    exist_dashd_command: "{{ exist_dashd | success }}"

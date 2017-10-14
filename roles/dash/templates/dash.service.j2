@@ -1,0 +1,10 @@
+[Unit]
+Description=DASH service
+
+[Service]
+User=root
+ExecStart={{ dash_commands_dir }}/dashd
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

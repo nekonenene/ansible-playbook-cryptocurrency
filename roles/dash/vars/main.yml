@@ -1,0 +1,7 @@
+dash_git_url: "https://github.com/dashpay/dash.git"
+dash_git_repo_dir: /tmp/dash
+dash_conf_dir: ~/.dashcore
+dash_data_dir: /root/dash
+dash_commands_dir: /usr/local/bin
+
+dash_reinstall_mode: false # recommend that you set "false" because installing spends huge time

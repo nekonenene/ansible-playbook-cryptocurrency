@@ -1,0 +1,39 @@
+- name: install build packages
+  become: true
+  become_user: root
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - build-essential
+    - libtool
+    - autotools-dev
+    - automake
+    - pkg-config
+    - libssl-dev
+    - libboost-all-dev
+    - libevent-dev
+    - bsdmainutils
+    - libdb4.8-dev # BerkeleyDB 4.8
+    - libdb4.8++-dev
+
+- name: clone dash repository
+  git:
+    repo: "{{ dash_git_url }}"
+    dest: "{{ dash_git_repo_dir }}"
+
+- name: create Makefile
+  shell: >
+    ./autogen.sh &&
+    ./configure
+  args:
+    chdir: "{{ dash_git_repo_dir }}"
+
+- name: make
+  make:
+    chdir: "{{ dash_git_repo_dir }}"
+
+- name: install DASH commands
+  make:
+    chdir: "{{ dash_git_repo_dir }}"
+    target: install

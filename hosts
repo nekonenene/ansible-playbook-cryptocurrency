@@ -2,4 +2,5 @@
 your-server-host
 
 [dash-dev:vars]
-host = dash-dev
+dash_rpc_user = test-user
+dash_rpc_password = test-password

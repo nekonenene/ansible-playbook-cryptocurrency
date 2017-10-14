@@ -1,0 +1,21 @@
+- name: add dash service
+  become: true
+  become_user: root
+  template:
+    src: dash.service.j2
+    dest: "{{ systemd_service_dir }}/dash.service"
+    mode: 0644
+  notify: restart dash
+
+- name: systemctl daemon-reload
+  become: true
+  become_user: root
+  command: systemctl daemon-reload
+
+- name: ensure dash is started and enable on boot
+  become: true
+  become_user: root
+  service:
+    name: dash
+    state: started
+    enabled: yes

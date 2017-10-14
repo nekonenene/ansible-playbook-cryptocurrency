@@ -1,0 +1,6 @@
+- import_tasks: check_command.yml
+- import_tasks: add_repo.yml
+- import_tasks: install.yml
+  when: not exist_dashd_command or dash_reinstall_mode
+- import_tasks: config.yml
+- import_tasks: service.yml

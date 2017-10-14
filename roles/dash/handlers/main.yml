@@ -1,0 +1,6 @@
+- name: restart dash
+  become: true
+  become_user: root
+  service:
+    name: dash
+    state: restarted
