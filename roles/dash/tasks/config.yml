@@ -1,11 +1,14 @@
-- name: create data dir
+- name: create data dir & config dir
   become: true
   become_user: root
   file:
-    path: "{{ dash_data_dir }}"
+    path: "{{ item }}"
     mode: 0700
     state: directory
     recurse: yes
+  with_items:
+    - "{{ dash_data_dir }}"
+    - "{{ dash_conf_dir }}"
 
 - name: put dash config file
   become: true
