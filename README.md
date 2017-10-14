@@ -19,19 +19,19 @@ You need...
 ## Usage
 
 1. Clone this repository  
-  ```sh
-  git clone git@github.com:nekonenene/ansible-cookbook-dash.git && cd ansible-cookbook-dash
-  ```
-  
+    ```sh
+    git clone git@github.com:nekonenene/ansible-cookbook-dash.git && cd ansible-cookbook-dash
+    ```
+    
 2. Update `hosts` file  
-  ```
-  [dash-dev]
-  your-server-host <- Change to the Host or IP address of your server
-  ```
-  
+    ```
+    [dash-dev]
+    your-server-host <= Change to the Host or IP address of your server!
+    ```
+    
 3. Start building
-  ```sh
-  ansible-playbook -i hosts dash.yml
-  ```
-  
-  About 30 minutes later, Ansible processing ends. And the TestNet node will start running in your server!
+    ```sh
+    ansible-playbook -i hosts dash.yml
+    ```
+    
+    About 30 minutes later, Ansible processing ends. And the TestNet node will start running in your server!
