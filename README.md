@@ -23,7 +23,7 @@ You need...
     git clone git@github.com:nekonenene/ansible-cookbook-dash.git && cd ansible-cookbook-dash
     ```
     
-2. Update `hosts` file  
+2. Update `hosts` file in the current directory  
     ```
     [dash-dev]
     your-server-host <= Change to the Host or IP address of your server!
