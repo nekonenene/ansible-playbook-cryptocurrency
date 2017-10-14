@@ -1,0 +1,6 @@
+- hosts: dash-dev
+  vars_files:
+    - gitignore_vars/vars.yml # TODO: あとで消す
+    - group_vars/vars.yml
+  roles:
+    - apt
