@@ -34,17 +34,17 @@ You need...
     ```
     vi ./hosts/development
     ```
-    You should change `your-server-host` to the **[Host](http://man7.org/linux/man-pages/man5/ssh_config.5.html)** or IP address of your server!
+    You should change `your-server-host` to your **[Host](http://man7.org/linux/man-pages/man5/ssh_config.5.html)**
     
-3. Start building
-    **Bitcoin**
-    ```sh
-    ansible-playbook -i hosts/development bitcoin.yml
-    ```
+3. Start building  
+    - **Bitcoin**
+        ```sh
+        ansible-playbook -i hosts/development bitcoin.yml
+        ```
     
-    **DASH**
-    ```sh
-    ansible-playbook -i hosts/development dash.yml
-    ```
+    - **DASH**
+        ```sh
+        ansible-playbook -i hosts/development dash.yml
+        ```
     
     When Ansible processing ends, the TestNet node will start running in your server!  
