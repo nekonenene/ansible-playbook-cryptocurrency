@@ -2,25 +2,25 @@ alias ls='ls -a --color=auto'
 alias grep='grep --color=auto'
 alias ..='cd ..'
 
-# 履歴ファイルの最大履歴数
+# history size of .bash_history
 export HISTFILESIZE
 HISTFILESIZE='10240'
 
-# 実行中プロセスの最大履歴数
+# history size of a shell process
 export HISTSIZE
 HISTSIZE='10240'
 
-# 連続した重複履歴を排除
+# Remove duplicate history
 export HISTCONTROL
 HISTCONTROL='ignoredups'
 
-# 複数端末間でコマンド履歴を共有
+# Share command history among multiple terminals
 export PROMPT_COMMAND
 PROMPT_COMMAND='history -a; history -c; history -r'
 
-# ページャー
+# Use "less"
 export PAGER
 PAGER='less'
 
-# 指定がなければ 644 or 755 で新規ファイル作成
+# default permission: 644 or 755
 umask 022
