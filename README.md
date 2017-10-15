@@ -1,4 +1,4 @@
-# Ansible playbook for Bitcoin / DASH
+# Ansible Playbooks for Cryptocurrency TestNet Node
 
 Let's build your cryptocurrency node with Ansible!
 
@@ -30,21 +30,21 @@ You need...
     git clone git@github.com:nekonenene/ansible-playbook-cryptocurrency.git && cd ansible-playbook-cryptocurrency
     ```
     
-2. Update `./hosts/development`
+2. Update `./hosts/testnet`
     ```
-    vi ./hosts/development
+    vi ./hosts/testnet
     ```
     You should change `your-server-host` to your **[Host](http://man7.org/linux/man-pages/man5/ssh_config.5.html)**
     
 3. Start building  
     - **Bitcoin**
         ```sh
-        ansible-playbook -i hosts/development bitcoin.yml
+        ansible-playbook -i hosts/testnet bitcoin.yml
         ```
     
     - **DASH**
         ```sh
-        ansible-playbook -i hosts/development dash.yml
+        ansible-playbook -i hosts/testnet dash.yml
         ```
     
     When Ansible processing ends, the TestNet node will start running in your server!  
