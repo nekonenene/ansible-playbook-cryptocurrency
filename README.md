@@ -1,6 +1,13 @@
-# Ansible cookbook for DASH
+# Ansible cookbook for Bitcoin / DASH
 
-Let's build your DASH (crypto currency) node with Ansible!
+Let's build your cryptocurrency node with Ansible!
+
+
+## Supporting cryptocurrency
+
+- Bitcoin
+- DASH
+
 
 ## Requirement
 
@@ -12,7 +19,7 @@ You need...
 ### Server requirement
 
 - OS: Ubuntu 16.04
-- SSD: 20GB or more
+- SSD: 20GB or more (depends on the currency type)
 - Memory: 2GB or more (1GB may be barely enough)
 
 
@@ -20,18 +27,24 @@ You need...
 
 1. Clone this repository  
     ```sh
-    git clone git@github.com:nekonenene/ansible-cookbook-dash.git && cd ansible-cookbook-dash
+    git clone git@github.com:nekonenene/ansible-cookbook-cryptocurrency.git && cd ansible-cookbook-cryptocurrency
     ```
     
-2. Update `hosts` file in the current directory  
+2. Update `./hosts/development`
     ```
-    [dash-dev]
-    your-server-host <= Change to the Host or IP address of your server!
+    vi ./hosts/development
     ```
+    You should change `your-server-host` to the **[Host](http://man7.org/linux/man-pages/man5/ssh_config.5.html)** or IP address of your server!
     
 3. Start building
+    **Bitcoin**
     ```sh
-    ansible-playbook -i hosts dash.yml
+    ansible-playbook -i hosts/development bitcoin.yml
     ```
     
-    About 30 minutes later, Ansible processing ends. And the TestNet node will start running in your server!
+    **DASH**
+    ```sh
+    ansible-playbook -i hosts/development dash.yml
+    ```
+    
+    When Ansible processing ends, the TestNet node will start running in your server!  

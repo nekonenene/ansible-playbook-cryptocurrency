@@ -1,4 +1,4 @@
-- hosts: bitcoin-dev
+- hosts: bitcoin
   vars_files:
     - group_vars/vars.yml
   roles:

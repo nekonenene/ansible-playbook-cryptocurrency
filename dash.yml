@@ -1,4 +1,4 @@
-- hosts: dash-dev
+- hosts: dash
   vars_files:
     - group_vars/vars.yml
   roles:

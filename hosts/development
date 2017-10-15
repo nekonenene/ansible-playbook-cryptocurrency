@@ -1,0 +1,13 @@
+[dash]
+your-server-host # <= Change to the Host or IP address of your server!
+
+[dash:vars]
+dash_rpc_user = TestUser
+dash_rpc_password = TestPassword
+
+[bitcoin]
+your-server-host # <= Change to the Host or IP address of your server!
+
+[bitcoin:vars]
+bitcoin_rpc_user = TestUser
+bitcoin_rpc_password = TestPassword
