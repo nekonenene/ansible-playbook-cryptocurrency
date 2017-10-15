@@ -1,4 +1,4 @@
-# Ansible cookbook for Bitcoin / DASH
+# Ansible playbook for Bitcoin / DASH
 
 Let's build your cryptocurrency node with Ansible!
 
@@ -27,7 +27,7 @@ You need...
 
 1. Clone this repository  
     ```sh
-    git clone git@github.com:nekonenene/ansible-cookbook-cryptocurrency.git && cd ansible-cookbook-cryptocurrency
+    git clone git@github.com:nekonenene/ansible-playbook-cryptocurrency.git && cd ansible-playbook-cryptocurrency
     ```
     
 2. Update `./hosts/development`
