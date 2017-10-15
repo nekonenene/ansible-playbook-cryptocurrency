@@ -6,7 +6,9 @@
 
 # Run on the test network instead of the real dash network.
 #testnet=0
+{% if testnet_enable is undefined or testnet_enable %}
 testnet=1
+{% endif %}
 
 # Run a regression test network
 #regtest=0
