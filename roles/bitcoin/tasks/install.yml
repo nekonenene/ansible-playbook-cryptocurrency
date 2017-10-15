@@ -1,0 +1,6 @@
+- name: install bitcoin commands
+  become: true
+  become_user: root
+  apt:
+    name: bitcoind
+    state: latest

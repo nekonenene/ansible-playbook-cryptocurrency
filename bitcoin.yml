@@ -1,0 +1,7 @@
+- hosts: bitcoin-dev
+  vars_files:
+    - group_vars/vars.yml
+  roles:
+    - apt
+    - config
+    - bitcoin

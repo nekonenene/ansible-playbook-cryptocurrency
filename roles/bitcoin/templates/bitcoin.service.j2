@@ -1,0 +1,10 @@
+[Unit]
+Description=Bitcoin service
+
+[Service]
+User=root
+ExecStart={{ bitcoin_commands_dir }}/bitcoind
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

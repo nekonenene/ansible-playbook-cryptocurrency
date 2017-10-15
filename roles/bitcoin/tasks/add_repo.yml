@@ -1,0 +1,11 @@
+- name: add repository to get BerkeleyDB 4.8
+  become: true
+  become_user: root
+  apt_repository:
+    repo: "ppa:bitcoin/bitcoin"
+
+- name: update all packages
+  become: true
+  become_user: root
+  apt:
+    update_cache: yes

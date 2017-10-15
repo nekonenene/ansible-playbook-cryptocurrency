@@ -1,0 +1,3 @@
+bitcoin_conf_dir: ~/.bitcoin
+bitcoin_data_dir: /root/bitcoin
+bitcoin_commands_dir: /usr/bin

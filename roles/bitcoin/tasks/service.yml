@@ -1,0 +1,21 @@
+- name: add bitcoin service
+  become: true
+  become_user: root
+  template:
+    src: bitcoin.service.j2
+    dest: "{{ systemd_service_dir }}/bitcoin.service"
+    mode: 0644
+  notify: restart bitcoin
+
+- name: systemctl daemon-reload
+  become: true
+  become_user: root
+  command: systemctl daemon-reload
+
+- name: ensure bitcoin is started and enable on boot
+  become: true
+  become_user: root
+  service:
+    name: bitcoin
+    state: started
+    enabled: yes

@@ -2,5 +2,12 @@
 your-server-host
 
 [dash-dev:vars]
-dash_rpc_user = test-user
-dash_rpc_password = test-password
+dash_rpc_user = TestUser
+dash_rpc_password = TestPassword
+
+[bitcoin-dev]
+your-server-host
+
+[bitcoin-dev:vars]
+bitcoin_rpc_user = TestUser
+bitcoin_rpc_password = TestPassword

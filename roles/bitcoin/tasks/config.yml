@@ -1,0 +1,19 @@
+- name: create data dir & config dir
+  become: true
+  become_user: root
+  file:
+    path: "{{ item }}"
+    mode: 0700
+    state: directory
+    recurse: yes
+  with_items:
+    - "{{ bitcoin_data_dir }}"
+    - "{{ bitcoin_conf_dir }}"
+
+- name: put bitcoin config file
+  become: true
+  become_user: root
+  template:
+    src: "bitcoin.conf.j2"
+    dest: "{{ bitcoin_conf_dir }}/bitcoin.conf"
+  notify: restart bitcoin

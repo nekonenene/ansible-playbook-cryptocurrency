@@ -1,0 +1,6 @@
+- name: restart bitcoin
+  become: true
+  become_user: root
+  service:
+    name: bitcoin
+    state: restarted
